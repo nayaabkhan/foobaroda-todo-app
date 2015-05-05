@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Nueve', Arial, sans-serif;
+  font-size: 15px;
+  color: #444;
+  background-color: #ececec;
+}
+
+.app-header,
+.app-container,
+.app-footer {
+  margin: 0 auto;
+  width: 480px;
+}
+
+.app-header,
+.app-footer {
+  text-align: center;
+}
+
+.app-header {
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+.app-header-title {
+  margin: 0 0 4px;
+  font-size: 27px;
+}
+
+.app-header-description {
+  margin: 0;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.app-footer {
+  font-size: 12px;
+  color: #888;
+}
