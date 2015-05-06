@@ -13,7 +13,17 @@
       <h2 class="app-header-description">Collborative ToDo app for Foo Baroda Group</h2>
     </div>
 
-    <div class="app-container" ng-app="foodoApp"></div>
+    <div class="app-container" ng-app="foodoApp">
+
+      <ul ng-controller="mainController">
+        <li ng-repeat="todoItem in todoList">
+          <span ng-if="todoItem.done">✔︎</span>
+          <span ng-if="!todoItem.done">✖︎</span>
+          {{ todoItem.text }}
+        </li>
+      </ul>
+
+    </div>
 
     <div class="app-footer">
       &copy; Copyright Foo Baroda.

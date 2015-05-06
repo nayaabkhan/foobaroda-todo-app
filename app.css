@@ -37,6 +37,13 @@ body {
   font-weight: normal;
 }
 
+.app-container {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
 .app-footer {
   font-size: 12px;
   color: #888;
