@@ -15,13 +15,16 @@
 
     <div class="app-container" ng-app="foodoApp">
 
-      <ul ng-controller="mainController">
-        <li ng-repeat="todoItem in todoList">
-          <span ng-if="todoItem.done">✔︎</span>
-          <span ng-if="!todoItem.done">✖︎</span>
-          {{ todoItem.text }}
-        </li>
-      </ul>
+      <form ng-controller="mainController">
+        <ul class="app-todo-list">
+          <li ng-repeat="todoItem in todoList">
+            <label ng-class="{'app-todo-item-done': todoItem.done}">
+              <input type="checkbox" ng-model="todoItem.done">
+              <span>{{todoItem.text}}</span>
+            </label>
+          </li>
+        </ul>
+      </form>
 
     </div>
 

@@ -44,6 +44,32 @@ body {
   border-radius: 5px;
 }
 
+.app-todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-todo-list li {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.app-todo-list li label {
+  display: block;
+  cursor: pointer;
+}
+
+.app-todo-list li:last-child {
+  border-bottom: none;
+}
+
+.app-todo-item-done span {
+  color: #888;
+  text-decoration: line-through;
+}
+
 .app-footer {
   font-size: 12px;
   color: #888;
