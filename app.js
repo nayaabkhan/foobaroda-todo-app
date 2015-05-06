@@ -1,17 +1,16 @@
 // create fooDoApp module
-var app = angular.module('foodoApp', []);
+var app = angular.module('foodoApp', ['firebase']);
 
-app.controller('mainController', function ($scope) {
+app.controller('mainController', function ($scope, $firebaseArray) {
+
+  // reference to the firebase model
+  var ref = new Firebase("https://foodo-app.firebaseio.com/todos");
 
   // model to hold the new todo text
   $scope.newTodoText = '';
 
-  // mock todos
-  $scope.todoList = [
-    { text: 'Shave', done: false },
-    { text: 'Clean the house', done: false },
-    { text: 'Share selfies on FB', done: true }
-  ];
+  // firebase todos array
+  $scope.todoList = $firebaseArray(ref);
 
 
   // method to add a new todo to the todoList
@@ -20,7 +19,7 @@ app.controller('mainController', function ($scope) {
       return;
     }
 
-    $scope.todoList.push({
+    $scope.todoList.$add({
       text: $scope.newTodoText,
       done: false
     });
@@ -29,7 +28,7 @@ app.controller('mainController', function ($scope) {
 
   // method to remove a todo from the todoList
   $scope.deleteTodo = function (index) {
-    $scope.todoList.splice(index, 1);
+    $scope.todoList.$remove(index);
   };
 
 });
