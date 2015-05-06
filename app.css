@@ -44,6 +44,41 @@ body {
   border-radius: 5px;
 }
 
+.app-add-todo {
+  border-bottom: 1px solid #ccc;
+}
+
+.app-add-todo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.app-add-todo input {
+  border: 0;
+  padding: 8px;
+  background-color: transparent;
+  width: 90%;
+  font-size: 16px;
+  text-align: center;
+  float: left;
+}
+
+.app-add-todo input:focus {
+  outline: none;
+}
+
+.app-add-todo button {
+  border: none;
+  width: 10%;
+  float: left;
+  height: 39px;
+  font-size: 18px;
+  color: #1386EE;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .app-todo-list {
   margin: 0;
   padding: 0;

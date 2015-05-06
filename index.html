@@ -15,7 +15,15 @@
 
     <div class="app-container" ng-app="foodoApp">
 
-      <form ng-controller="mainController">
+      <form ng-controller="mainController"
+            ng-submit="addNewTodo()">
+        <div class="app-add-todo">
+          <input type="text"
+                 placeholder="What do you want to do?"
+                 autofocus
+                 ng-model="newTodoText">
+          <button type="submit">+</button>
+        </div>
         <ul class="app-todo-list">
           <li ng-repeat="todoItem in todoList">
             <label ng-class="{'app-todo-item-done': todoItem.done}">
