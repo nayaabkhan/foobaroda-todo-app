@@ -30,6 +30,8 @@
               <input type="checkbox" ng-model="todoItem.done">
               <span>{{todoItem.text}}</span>
             </label>
+            <button class="app-delete-todo"
+                    ng-click="deleteTodo($index)">DELETE</button>
           </li>
         </ul>
       </form>

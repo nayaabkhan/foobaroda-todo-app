@@ -27,4 +27,9 @@ app.controller('mainController', function ($scope) {
     $scope.newTodoText = '';
   };
 
+  // method to remove a todo from the todoList
+  $scope.deleteTodo = function (index) {
+    $scope.todoList.splice(index, 1);
+  };
+
 });
